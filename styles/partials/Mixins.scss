@@ -1,0 +1,8 @@
+@mixin flexBox() {
+    display: flex;
+}
+
+@mixin grid() {
+    display: grid;
+    place-content: center;
+}

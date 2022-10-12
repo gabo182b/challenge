@@ -1,4 +1,13 @@
-html,
+@import "./partials/Global.scss";
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -9,10 +18,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
