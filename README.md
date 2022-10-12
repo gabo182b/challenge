@@ -17,7 +17,7 @@ Tech Stack:
 Steps to run project locally :
 
 - Clone https://github.com/gabo182b/tyerra-challenge
--Use nvm to setup node 12 if required with: 
+- Use nvm to setup node 12 if required with: 
   curl -o- htps://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 - Run command to install node v12 with nvm: 
     nvm install v12.22.0
@@ -26,6 +26,6 @@ Steps to run project locally :
 - Install dependencies with npm: 
     npm i
 - Serve app: 
-    npm dun dev
+    npm run dev
 
 Default local base url http://localhost:3000/
