@@ -20,7 +20,7 @@ const Home = ({ videos }) => {
         <meta name="description" content="VideoFeed" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <VideoFeed listOfVideos={videos} />
+      {videos && <VideoFeed listOfVideos={videos} />}
     </div>
   )
 }
