@@ -1,4 +1,4 @@
-Challengue for a vacancy as Front-End Developer
+Challenge for a vacancy as Front-End Developer
 
 App deployed at:
 https://ephemeral-bienenstitch-04a0e6.netlify.app/
