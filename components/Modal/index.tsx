@@ -2,7 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from './modal.module.scss'
 
-const Modal = ({ closeModal }) => (
+export interface ModalProps {
+    closeModal: React.MouseEventHandler<HTMLButtonElement>
+}
+
+const Modal = ({ closeModal }: ModalProps) => (
     <div className={styled.modalBackground}>
         <div className={styled.modalContainer}>
             <button

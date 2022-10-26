@@ -2,7 +2,16 @@ import React from "react"
 import PropTypes from 'prop-types'
 import styled from "./video.module.scss"
 
-const Video = ({ videoToShow, handleModal }) => (
+type videoToShow = {
+    video: string
+}
+
+export interface VideoProps {
+    videoToShow: videoToShow
+    handleModal: React.MouseEventHandler<HTMLButtonElement>
+}
+
+const Video = ({videoToShow, handleModal }: VideoProps) => (
     <>
         <video
             autoPlay
@@ -21,7 +30,7 @@ const Video = ({ videoToShow, handleModal }) => (
             </button>
         </footer>
     </>
-);
+)
 
 Video.propTypes = {
     videoToShow: PropTypes.object.isRequired,

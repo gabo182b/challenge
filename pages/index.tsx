@@ -1,18 +1,28 @@
 import Head from 'next/head'
 import PropTypes from 'prop-types'
-import VideoFeed from '../components/VideoFeed'
+import VideoFeed from '../components/VideoFeed/index'
 import styles from '../styles/Home.module.scss'
 import getVideos from '../services/getVideos'
+import { GetStaticProps } from 'next'
 
-export async function getStaticProps(context) {
-  const videos = await getVideos()
+export interface VideosResult {
+  id:    number;
+  video: string;
+}
+
+export interface Videos {
+  videos: []
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const videos: VideosResult = await getVideos()
 
   return {
     props: { videos }
   }
 }
 
-const Home = ({ videos }) => {
+const Home = ({ videos }: Videos ) => {
   return (
     <div className={styles.container}>
       <Head>

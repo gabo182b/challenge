@@ -3,13 +3,18 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import PropTypes from 'prop-types'
 import Slider from "react-slick"
-import Modal from '../Modal'
-import Video from '../Video'
+import Modal from "../Modal/index"
+import Video from "../Video/index"
 import sliderSettings from './config'
 
-const VideoFeed = ({ listOfVideos }) => {
+
+export interface VideoFeedProps {
+    listOfVideos: []
+}
+
+const VideoFeed = ({ listOfVideos }: VideoFeedProps) => {
     const [openModal, setOpenModal] = useState(false)
-    const [videos, setVideos] = useState([])
+    const [videos, setVideos] = useState([] as any[])
 
     const handleVideos = useCallback(() => {
         setVideos(listOfVideos)
@@ -30,7 +35,11 @@ const VideoFeed = ({ listOfVideos }) => {
             <div>
                 <Slider {...sliderSettings}>
                     {videos && videos.map(videoToShow => (
-                        <Video key={videoToShow.id} videoToShow={videoToShow} handleModal={handleModal} />
+                        <Video 
+                            handleModal={handleModal} 
+                            key={videoToShow.id} 
+                            videoToShow={videoToShow} 
+                        />
                     )
                     )}
                 </Slider>
