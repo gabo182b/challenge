@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback} from 'react'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { VideoFeedProps, Videos, VideoToShow } from './types'
@@ -30,7 +30,7 @@ const VideoFeed = ({ listOfVideos }: VideoFeedProps) => {
             <div>
                 <Slider {...sliderSettings}>
                     {videos && videos.map((videoToShow: VideoToShow) => (
-                        <Video 
+                        <Video
                             handleModal={handleModal} 
                             key={videoToShow.id} 
                             videoToShow={videoToShow} 
