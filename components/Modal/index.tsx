@@ -1,10 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { ModalProps } from './types'
 import styled from './modal.module.scss'
-
-export interface ModalProps {
-    closeModal: React.MouseEventHandler<HTMLButtonElement>
-}
 
 const Modal = ({ closeModal }: ModalProps) => (
     <div className={styled.modalBackground}>
@@ -18,9 +14,5 @@ const Modal = ({ closeModal }: ModalProps) => (
         </div>
     </div>
 )
-
-Modal.propTypes = {
-    closeModal: PropTypes.func.isRequired
-}
 
 export default Modal

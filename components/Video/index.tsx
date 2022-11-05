@@ -1,20 +1,13 @@
-import React from "react"
-import PropTypes from 'prop-types'
+import React from 'react'
+import { VideoProps } from './types'
 import styled from "./video.module.scss"
 
-type videoToShow = {
-    video: string
-}
-
-export interface VideoProps {
-    videoToShow: videoToShow
-    handleModal: React.MouseEventHandler<HTMLButtonElement>
-}
-
-const Video = ({videoToShow, handleModal }: VideoProps) => (
+const Video = ({videoToShow, handleModal }: VideoProps) => {
+    return (
     <>
         <video
             autoPlay
+            preload='true'
             className={styled.videoToShow}
             controls={false}
             loop
@@ -30,11 +23,6 @@ const Video = ({videoToShow, handleModal }: VideoProps) => (
             </button>
         </footer>
     </>
-)
-
-Video.propTypes = {
-    videoToShow: PropTypes.object.isRequired,
-    handleModal: PropTypes.func.isRequired
-}
+)}
 
 export default Video

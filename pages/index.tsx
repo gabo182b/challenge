@@ -1,18 +1,10 @@
+import React from 'react'
 import Head from 'next/head'
-import PropTypes from 'prop-types'
 import VideoFeed from '../components/VideoFeed/index'
 import styles from '../styles/Home.module.scss'
 import getVideos from '../services/getVideos'
+import { VideosResult, Videos } from './types'
 import { GetStaticProps } from 'next'
-
-export interface VideosResult {
-  id:    number;
-  video: string;
-}
-
-export interface Videos {
-  videos: []
-}
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const videos: VideosResult = await getVideos()
@@ -34,9 +26,4 @@ const Home = ({ videos }: Videos ) => {
     </div>
   )
 }
-
-Home.propTypes = {
-  videos: PropTypes.array.isRequired
-}
-
 export default Home
