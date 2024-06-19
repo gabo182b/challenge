@@ -15,7 +15,7 @@ Tech Stack:
 
 Steps to run project locally :
 
-- Clone https://github.com/gabo182b/tyerra-challenge
+- Clone https://github.com/gabo182b/challenge
 - Install dependencies with npm: 
     npm i
 - Serve app: 
