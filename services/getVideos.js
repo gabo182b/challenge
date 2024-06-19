@@ -2,7 +2,7 @@ const getVideos = async () => {
     try {
         let response = await fetch("https://api.pexels.com/videos/search?query=LivingRoom&orientation=portrait&size=medium", {
             headers: {
-                Authorization: "563492ad6f917000010000015c3e970b3f104e1ba71af907a6c3c8d2"
+                Authorization: "Vmv2CGru4PPuWlHns023jBFi8D0vHPSirV3Vv85UM0e5XCYTylC6cQ1C"
             }
         })
         let resp = await response.json()
@@ -13,7 +13,7 @@ const getVideos = async () => {
             }
         })
     } catch (error) {
-        console.log(error)
+        console.log(error.message)
         return []
     }
 }

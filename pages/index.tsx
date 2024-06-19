@@ -18,7 +18,7 @@ const Home = ({ videos }: Videos ) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Tyerra challenge</title>
+        <title>Challenge</title>
         <meta name="description" content="VideoFeed" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
